@@ -42,6 +42,11 @@ header{
     text-decoration: none;
     color: black;
     font-family: 'Ubuntu', sans-serif;
+    transition: transform 1s ease;
+}
+.navbar>ul>div>li:hover{
+    transform: scale(1.2);
+    /* text-decoration: underline; */
 }
 /* Home page */
 .header_img {
@@ -105,15 +110,29 @@ header{
     font-family: 'Ubuntu',sans-serif;
     color: black;
 }
-#img1{
+.descimg{
     width: 420px;
     height: 270px;
+    overflow: hidden;
+}
+#img1{
+    width: 100%;
     border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+#img1:hover{
+    transform: scale(1.2);
 }
 .textbottom>p{
     font-size: 40px;
     font-family: 'Ubuntu',sans-serif;
     margin: 30px 75px;
+}
+.hovereffects{
+    color: rgb(2, 2, 2);
+}
+.hovereffects:hover{
+    color: #eb9d01;
 }
 .shopnow{
     position: relative;
@@ -157,6 +176,10 @@ header{
     grid-template-rows: 1fr .3fr;
     overflow: hidden;
     border-radius: 20px;
+    transition: transform 0.5s ease;
+}
+.card:hover{
+    transform: scale(1.09);
 }
 .images{
     height: 350px;
@@ -164,11 +187,16 @@ header{
     margin-top: 5%;
     margin-left: 5%;
     margin-right: 5%;
+    overflow: hidden;
 }
 .images img{
     height: 100%;
     border-radius: 20px;
     width: 100%;
+    transition: transform 0.5s ease;
+}
+.images img:hover{
+    transform: scale(1.2);
 }
 .data{
     padding: 3%;
