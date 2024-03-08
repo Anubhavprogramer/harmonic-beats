@@ -47,30 +47,6 @@ const reviews = [
         "review_text": "Highly recommended. Will buy again!",
         "created_at": "2023-04-01 at 2:15 PM"
     },
-    {
-        "review_id": 8,
-        "user_name": "Anaya",
-        "review_text": "Highly recommended. Will buy again!",
-        "created_at": "2023-04-01 at 2:15 PM"
-    },
-    {
-        "review_id": 8,
-        "user_name": "Anaya",
-        "review_text": "Highly recommended. Will buy again!",
-        "created_at": "2023-04-01 at 2:15 PM"
-    },
-    {
-        "review_id": 8,
-        "user_name": "Anaya",
-        "review_text": "Highly recommended. Will buy again!",
-        "created_at": "2023-04-01 at 2:15 PM"
-    },
-    {
-        "review_id": 8,
-        "user_name": "Anaya",
-        "review_text": "Highly recommended. Will buy again!",
-        "created_at": "2023-04-01 at 2:15 PM"
-    }
   ];
   
     

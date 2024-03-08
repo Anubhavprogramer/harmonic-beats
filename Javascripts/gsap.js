@@ -86,5 +86,16 @@ tl1.from(".col_1>h3",{
     },
     opacity:0,
     x:-200,
-    duration:1
+    duration:2
+})
+.from(".ourteam>h1",{
+    scrollTrigger:{
+        trigger:"#review",
+        scroller:"body",
+        end:"top 10%",
+        scrub:true,
+    },
+    opacity:0,
+    x:-200,
+    duration:2
 })

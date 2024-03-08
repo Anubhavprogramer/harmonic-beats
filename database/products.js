@@ -62,19 +62,7 @@ const data=[
       "created_at": "2023-11-03",
       "product-link":"https://www.amazon.in/Sony-WH-1000XM4-Cancelling-Headphones-Bluetooth/dp/B0863TXGM3/ref=sr_1_1_sspa?crid=KRM2AOZXTJ4V&keywords=Bose+QuietComfort+35+II%22&nsdOptOutParam=true&qid=1699375434&sprefix=bose+quietcomfort+35+ii+%2Caps%2C276&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
       
-    },
-    {
-      "product_id": "3",
-      "name": "Sennheiser HD 660 S",
-      "description": "Open-Back Over-Ear Headphones",
-      "price": 499.99,
-      "category": "Over-Ear Headphones",
-      "brand": "Sennheiser",
-      "image_url": "../assets/i3.jpg",
-      "stock_quantity": 30,
-      "created_at": "2023-11-03",
-      "product-link":"https://www.amazon.in/Sennheiser-HD-450SE-Headphones-Black/dp/B09325WTV5/ref=sr_1_1_sspa?crid=1N9AS8JXW17C6&keywords=Sennheiser+HD+660+S&nsdOptOutParam=true&qid=1699375463&sprefix=sennheiser+hd+660+s%2Caps%2C336&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
-    },
+    }
   ]
   
 

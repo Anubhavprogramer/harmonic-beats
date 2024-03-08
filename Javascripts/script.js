@@ -60,3 +60,20 @@ closepopup4.addEventListener('click', function () {
 })
 
 
+const cursor = document.querySelector('.cursor');
+const homeElements = document.getElementsByClassName('Home');
+
+for (let i = 0; i < homeElements.length; i++) {
+    homeElements[i].addEventListener('mouseenter', () => {
+        cursor.style.display = 'block';
+    });
+
+    homeElements[i].addEventListener('mouseleave', () => {
+        cursor.style.display = 'none';
+    });
+}
+
+document.addEventListener('mousemove',(e)=>{
+    cursor.style.left = e.pageX + 'px';
+    cursor.style.top = e.pageY + 'px';
+});

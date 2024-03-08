@@ -6,12 +6,33 @@
     padding: 0;
     margin: 0;
 }
-body{
-    background:linear-gradient(90deg, rgba(255,255,255,), rgb(169, 163, 163), rgb(102, 101, 101), rgb(60, 60, 60), rgb(11, 11, 11));
+
+body::-webkit-scrollbar{
+    display: none;
+}
+.display{
+    display: none;
+}
+.main{
+    background:linear-gradient(90deg, rgba(255,255,255), rgb(199, 198, 198), rgb(122, 121, 121), rgb(54, 54, 54), rgb(12, 12, 12));
+    /* overflow-y: scroll; */
+    width: 100%;
+}
+.cursor{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f77c01;
+    z-index: 999;
+    transition: .00000001s;
+    cursor:none;
+    display: none;
 }
 .Home{
-    height: 100vh;
-    overflow: hidden;
+    cursor:none;
+    height: max-content;
+    
 }
 header{
     padding: 50px 35px;
@@ -43,9 +64,10 @@ header{
     color: black;
     font-family: 'Ubuntu', sans-serif;
     transition: transform 1s ease;
+    cursor: none;
 }
 .navbar>ul>div>li:hover{
-    transform: scale(1.2);
+    transform: rotate(-3deg);
     /* text-decoration: underline; */
 }
 /* Home page */
@@ -57,13 +79,14 @@ header{
 .Home>span {
     opacity: 1;
     color: black;
-    font-size: 120px;
-    padding: 50px 70px;
+    font-size: 115px;
+    padding: 0px 70px;
     font-family: 'Ubuntu', sans-serif;
+    display: block;
 }
 
 .slider{
-    padding-top: 125px;
+    padding-top: 100px;
     height: 40%;
     display: flex;
     width: calc(500px*8);
@@ -102,18 +125,22 @@ header{
 }
 .heading{
     display: flex;
+    justify-content: space-evenly;
+    margin: 30px 75px;
 }
 
 .heading>.col_1>h3, .heading>.col_1>h4{
     font-size: 110px;
-    margin: 0 75px;
     font-family: 'Ubuntu',sans-serif;
     color: black;
 }
 .descimg{
+    display: flex;
     width: 420px;
-    height: 270px;
+    height: 100%;
+    align-items: center;
     overflow: hidden;
+    padding-top: 10px;
 }
 #img1{
     width: 100%;
@@ -122,6 +149,11 @@ header{
 }
 #img1:hover{
     transform: scale(1.2);
+}
+.textbottom{
+    display: flex;
+    justify-content: baseline;
+    flex-direction: column;
 }
 .textbottom>p{
     font-size: 40px;
@@ -144,33 +176,30 @@ header{
     left: 40%;
     border-radius: 5px;
 }
-#products>h1{
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 40px;
-    margin-left: 180px;
-}
 
 .products{
     height: max-content;
 }
 #products>h1{
     font-family: 'Ubuntu', sans-serif;
-    font-size: 40px;
-    margin-left: 250px;
-    text-decoration: underline;
+    font-size: 67px;
+    display: flex;
+    justify-content: center;
 }
 .item {
     height: max-content;
     padding: 40px;
     width: auto;
-    display: grid;
-    grid-template-columns: auto auto auto ;
-    gap: 10px;
+    display: flex;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    /* gap: 10px; */
+    flex-wrap: wrap;
 }
 .card{
     margin: 20px;
-    height: max-content;
-    width: auto;
+    width: 400px;
+    padding: 18px;
     background-color: rgb(0, 0, 0);
     display: grid;
     grid-template-rows: 1fr .3fr;
@@ -182,24 +211,19 @@ header{
     transform: scale(1.09);
 }
 .images{
-    height: 350px;
-    margin-bottom: 2%;
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 100%;
     overflow: hidden;
+    /* margin: 5px; */
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
 }
 .images img{
-    height: 100%;
-    border-radius: 20px;
     width: 100%;
     transition: transform 0.5s ease;
 }
 .images img:hover{
     transform: scale(1.2);
-}
-.data{
-    padding: 3%;
 }
 .data h1{
     font-family: 'Ubuntu', sans-serif;
@@ -237,10 +261,11 @@ header{
     color: rgb(248, 167, 5);
 }
 .hovereffect{
-    color: white;
+    /* color: rgb(9, 9, 9); */
 }
 .hovereffect:hover{
-    color: #eb9d01;
+    color: rgb(255, 115, 0);
+    border-radius: 15px;
 }
 
 .datacontainer{
@@ -266,29 +291,26 @@ header{
 #review{
     height: max-content;
     margin-top: 70px;
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
 }
 #review > h1{
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 40px;
-    margin-left: 250px;
-    margin-bottom: 30px;
-    text-decoration: underline;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 70px;
+    margin-left: 30px;
 }
 
 .coment-section {
-    /* margin: 10px 10px; */
-    background-color: rgb(29, 28, 28);
-    padding: 10px 10px;
     width: auto;
     height: max-content;
-    color: white;
+    color: rgb(60, 60, 60);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex; 
     /* justify-content: space-between; */
 }
 .ourteam{
-    margin-top: 10px;
-    padding: 0px 20px;
+    margin: 10px 20px;
     width: 100%;
     height: 95%;
     margin: 20px 20px;
@@ -304,8 +326,9 @@ header{
     color: black;
 }
 .ourteam>p{
+    width: 90%;
     font-size: 18px;
-    margin: 20px;
+    padding: 20px 20px;
     line-height: 30px;
 }
 h2, h3 {
@@ -369,18 +392,15 @@ h2, h3 {
 
 .comments-list {
     padding: 5px 10px;
-    width: 90%;
+    width: 80%;
     margin: 10px;
     padding: 5px;
-    background-color: #3d3b3b;
-    border-radius: 3%;
-    font-weight: 100;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 12px;
     position: relative;
+    color: white;
+    font-weight: 400;
 }
 .comments-list:hover {
-    background-color: #eb9d01;
+    background-color: rgb(246, 143, 0);
     color: black;
 }
 
@@ -396,7 +416,6 @@ h2, h3 {
 /* footer-section */
 
 .footer {
-    background-color: #333;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -451,7 +470,6 @@ h2, h3 {
 }
 
 .footer-bottom {
-    background-color: #222;
     padding: 10px 0;
 }
 
@@ -486,4 +504,82 @@ h2, h3 {
 }
 .answers h5{
     font-size: 30px;
+}
+
+
+@media only screen and (max-width: 1368px) {
+    .Home > span {
+        font-size: 7rem;
+        padding: 10px 34px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 1264px) {
+    .Home > span {
+        font-size: 5rem;
+        padding: 10px 34px;
+    }
+}
+
+@media only screen and (max-width: 1240px) {
+    .heading>.col_1>h4,heading>.col_1>h3{
+        font-size: 100px;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 928px) {
+    .Home > span {
+        font-size: 4rem;
+        padding: 10px 34px;
+    }
+
+    .heading{
+        display: flex;
+        flex-direction: column;
+    }
+    .description {
+        height: max-content;
+    }
+
+    .coment-section {
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (max-width: 825px) {
+    .navbar>ul>div>li>a{
+        font-size: 12px;
+    }
+}
+
+
+@media only screen and (max-width: 710px) {
+    header {
+        padding: 20px 15px;
+    }
+    .slider {
+        padding-top: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 660px) {
+    .navbar>ul>div{
+        padding-left: 0;
+    }
+    /* #products>h1 {
+        margin-left: 143px;
+    } */
+}
+
+@media only screen and (max-width: 570px) {
+    .navbar>ul>div>li>a {
+        font-size: 9px;
+    }
 }
